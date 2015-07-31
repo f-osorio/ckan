@@ -195,7 +195,8 @@ def _trans_role_editor():
 
 
 def _trans_role_member():
-    return _('Member')
+    # return _('Member')
+    return _('Author')
 
 
 def trans_role(role):
