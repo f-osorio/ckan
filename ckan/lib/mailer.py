@@ -118,18 +118,20 @@ def get_reset_link_body(user):
 def get_invite_body(user):
     invite_message = _(
     "You have been invited to {site_title}. A user has already been created"
-    "to you with the username {user_name}. You can change it later.\n"
+    " to you with the username {user_name}. You can change it later.\n"
     "\n"
     "To accept this invite, please reset your password at:\n"
     "\n"
     "   {reset_link}\n"
     )
-
+    
     d = {
         'reset_link': get_reset_link(user),
         'site_title': g.site_title,
         'user_name': user.name,
         }
+    
+    #import ipdb; ipdb.set_trace()
     return invite_message.format(**d)
 
 def get_reset_link(user):
