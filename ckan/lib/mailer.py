@@ -123,6 +123,8 @@ def get_invite_body(user):
     "To accept this invite, please reset your password at:\n"
     "\n"
     "   {reset_link}\n"
+    "\n"
+    "Please also have a look at the documention: http://www.edawax.de/2542-1 \n"
     )
 
     d = {
