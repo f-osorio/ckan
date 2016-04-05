@@ -2,7 +2,7 @@ CKAN: The Open Source Data Portal Software
 ==========================================
 
 Note: this repo is for maintaining some minor modifications for the EDaWaX
-project (http://edawax.eu).
+project (http://edawax.de).
 
 
 
