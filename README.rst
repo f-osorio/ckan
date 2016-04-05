@@ -1,6 +1,12 @@
 CKAN: The Open Source Data Portal Software
 ==========================================
 
+Note: this repo is for maintaining some minor modifications for the EDaWaX
+project (http://edawax.eu).
+
+
+
+
 .. image:: https://secure.travis-ci.org/ckan/ckan.png?branch=master
     :target: http://travis-ci.org/ckan/ckan
     :alt: Build Status
