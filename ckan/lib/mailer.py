@@ -117,14 +117,15 @@ def get_reset_link_body(user):
 
 def get_invite_body(user):
     invite_message = _(
-    "You have been invited to {site_title}. A user has already been created "
-    "to you with the username {user_name}. You can change it later.\n"
+    
+    "You have been invited by the editor of your journal to deposit the replication "
+    "files of your paper in ZBW's Journal Data Archive \n"
     "\n"
     "To accept this invite, please reset your password at:\n"
     "\n"
     "{reset_link}\n"
     "\n"
-    "Please also have a look at the documentation: http://www.edawax.de/2542-1 \n"
+    "For advice, please consult the documentation of our service: http://www.edawax.de/2542-1 \n"
     )
 
     d = {
