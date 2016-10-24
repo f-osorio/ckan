@@ -1,4 +1,6 @@
-#!/usr/bin/env node
+#!/nix/store/zl1a3h9cdnzwgwa24j7x16cjd7x4czqd-nodejs-0.12.7/bin/node
+
+
 
 var path = require('path'),
     nodeWatch = require('nodewatch'),
