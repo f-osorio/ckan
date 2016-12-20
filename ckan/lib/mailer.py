@@ -117,7 +117,7 @@ def get_reset_link_body(user):
 
 def get_invite_body(user):
     invite_message = _(
-    
+
     "You have been invited by the editor of your journal to deposit the replication "
     "files of your paper in ZBW's Journal Data Archive \n"
     "\n"
@@ -125,13 +125,15 @@ def get_invite_body(user):
     "\n"
     "{reset_link}\n"
     "\n"
-    "For advice, please consult the documentation of our service: http://www.edawax.de/2542-1 \n"
+    "For advice, please consult the documentation of our service:\n"
+    "{site_url}/manual_en"
     )
 
     d = {
         'reset_link': get_reset_link(user),
         'site_title': g.site_title,
         'user_name': user.name,
+        'site_url': config.get('ckan.site_url')
         }
     return invite_message.format(**d)
 
@@ -167,6 +169,3 @@ def verify_reset_link(user, key):
     if not user.reset_key or len(user.reset_key) < 5:
         return False
     return key.strip() == user.reset_key
-
-
-
