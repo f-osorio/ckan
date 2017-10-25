@@ -126,7 +126,7 @@ def get_invite_body(user):
     "{reset_link}\n"
     "\n"
     "For advice, please consult the documentation of our service:\n"
-    "{site_url}/manual_en"
+    "{site_url}/manual_EN.pdf"
     )
 
     d = {
