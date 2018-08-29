@@ -768,6 +768,7 @@ class PackageController(base.BaseController):
         if pkg_dict['state'].startswith('draft'):
             vars['stage'] = ['complete', 'active']
             template = 'package/new_resource.html'
+
         return render(template, extra_vars=vars)
 
     def edit(self, id, data=None, errors=None, error_summary=None):
