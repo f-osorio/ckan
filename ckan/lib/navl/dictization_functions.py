@@ -158,7 +158,6 @@ def augment_data(data, schema):
     return new_data
 
 def convert(converter, key, converted_data, errors, context):
-
     if inspect.isclass(converter) and issubclass(converter, fe.Validator):
         try:
             value = converted_data.get(key)

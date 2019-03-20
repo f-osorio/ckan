@@ -73,6 +73,7 @@ def package_delete(context, data_dict):
     entity.delete()
     model.repo.commit()
 
+
 def resource_delete(context, data_dict):
     '''Delete a resource from a dataset.
 
@@ -365,7 +366,7 @@ def organization_delete(context, data_dict):
     '''
     return _group_or_org_delete(context, data_dict, is_org=True)
 
-def _group_or_org_purge(context, data_dict, is_org=False):
+def _group_or_org_purgef(context, data_dict, is_org=False):
     '''Purge a group or organization.
 
     The group or organization will be completely removed from the database.

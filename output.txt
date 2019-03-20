@@ -1,0 +1,136 @@
+---Start---
+Creating system admin
+Creating user: 'admin'
+None - {'name': ['That login name is not available.']}
+Added admin as sysadmin
+Changing config
+Server is running
+
+
+Running Tests
+Tests Finished
+
+
+Reset test database
+Cleaning DB: SUCCESS
+Initialising DB: SUCCESS
+---Start---
+Creating system admin
+Creating user: 'admin'
+{'about': None,
+ 'activity_streams_email_notifications': False,
+ 'apikey': u'1a612c6e-6ef7-4c9e-a6b3-ec73f860556f',
+ 'created': '2019-03-11T13:41:37.407088',
+ 'display_name': u'admin',
+ 'email': u'f.osorio@zbw.eu',
+ 'email_hash': 'fece50556b93dd1c630b49ba1bef2be6',
+ 'fullname': None,
+ 'id': u'55f14623-c740-4dde-a906-0ada909fbd27',
+ 'name': u'admin',
+ 'number_created_packages': 0L,
+ 'number_of_edits': 1L,
+ 'openid': None,
+ 'state': u'active',
+ 'sysadmin': False}
+Added admin as sysadmin
+Changing config
+Server is running
+
+
+Running Tests
+Tests Finished
+
+
+Reset test database
+Cleaning DB: SUCCESS
+Initialising DB: SUCCESS
+---Start---
+Creating system admin
+Creating user: 'admin'
+{'about': None,
+ 'activity_streams_email_notifications': False,
+ 'apikey': u'ddd804fd-24b6-4657-832a-b119824bb73f',
+ 'created': '2019-03-11T13:46:36.921465',
+ 'display_name': u'admin',
+ 'email': u'f.osorio@zbw.eu',
+ 'email_hash': 'fece50556b93dd1c630b49ba1bef2be6',
+ 'fullname': None,
+ 'id': u'85423f5f-b7af-4f63-8146-c26c61531d07',
+ 'name': u'admin',
+ 'number_created_packages': 0L,
+ 'number_of_edits': 1L,
+ 'openid': None,
+ 'state': u'active',
+ 'sysadmin': False}
+Added admin as sysadmin
+Changing config
+Server is running
+
+
+Running Tests
+Tests Finished
+
+
+Reset test database
+Cleaning DB: SUCCESS
+Initialising DB: SUCCESS
+---Start---
+Creating system admin
+Creating user: 'admin'
+{'about': None,
+ 'activity_streams_email_notifications': False,
+ 'apikey': u'132da713-9880-4577-8422-56c4dd7bb598',
+ 'created': '2019-03-11T13:48:56.704516',
+ 'display_name': u'admin',
+ 'email': u'f.osorio@zbw.eu',
+ 'email_hash': 'fece50556b93dd1c630b49ba1bef2be6',
+ 'fullname': None,
+ 'id': u'dcb585f3-a999-441c-a4ef-86f38ba2fa5d',
+ 'name': u'admin',
+ 'number_created_packages': 0L,
+ 'number_of_edits': 1L,
+ 'openid': None,
+ 'state': u'active',
+ 'sysadmin': False}
+Added admin as sysadmin
+Changing config
+Server is running
+
+
+Running Tests
+Tests Finished
+
+
+Reset test database
+Cleaning DB: SUCCESS
+Initialising DB: SUCCESS
+---Start---
+Creating system admin
+Creating user: 'admin'
+{'about': None,
+ 'activity_streams_email_notifications': False,
+ 'apikey': u'6acfdb3c-6424-47de-aa22-87b034d813b9',
+ 'created': '2019-03-11T13:51:00.509993',
+ 'display_name': u'admin',
+ 'email': u'f.osorio@zbw.eu',
+ 'email_hash': 'fece50556b93dd1c630b49ba1bef2be6',
+ 'fullname': None,
+ 'id': u'6a1ec608-14f3-4779-8ff9-6d7ab4be274c',
+ 'name': u'admin',
+ 'number_created_packages': 0L,
+ 'number_of_edits': 1L,
+ 'openid': None,
+ 'state': u'active',
+ 'sysadmin': False}
+Added admin as sysadmin
+Changing config
+Server is running
+
+
+Running Tests
+Tests Finished
+
+
+Reset test database
+Cleaning DB: SUCCESS
+Initialising DB: SUCCESS
