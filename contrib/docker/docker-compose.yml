@@ -7,7 +7,6 @@ volumes:
   ckan_home:
   ckan_storage:
   pg_data:
-  solr_data:
 
 services:
   ckan:
@@ -69,9 +68,6 @@ services:
     build:
       context: ../../
       dockerfile: contrib/docker/solr/Dockerfile
-    volumes:
-      - solr_data:/opt/solr/server/solr/ckan
-
 
   redis:
     container_name: redis
