@@ -411,7 +411,6 @@ class UserController(base.BaseController):
             data_dict = {'id': c.user}
 
             user_dict = get_action('user_show')(context, data_dict)
-
             return self.me()
         else:
             err = _('Login failed. Bad username or password.')
