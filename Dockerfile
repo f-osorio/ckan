@@ -1,4 +1,4 @@
-# See CKAN docs on installation from Docker Compose on usage
+dockerfile-development# See CKAN docs on installation from Docker Compose on usage
 FROM debian:stretch
 MAINTAINER Open Knowledge
 
@@ -13,6 +13,8 @@ RUN apt-get -q -y update \
         libpq-dev \
         libxml2-dev \
         libxslt-dev \
+        libxslt1-dev \
+        zlib1g-dev \
         libgeos-dev \
         libssl-dev \
         libffi-dev \
@@ -36,6 +38,8 @@ ARG CKAN_SITE_URL
 # Create ckan user
 RUN useradd -r -u 900 -m -c "ckan account" -d $CKAN_HOME -s /bin/false ckan
 
+# Give user permissions
+
 # Setup virtual environment for CKAN
 RUN mkdir -p $CKAN_VENV $CKAN_CONFIG $CKAN_STORAGE_PATH && \
     virtualenv $CKAN_VENV && \
@@ -52,12 +56,6 @@ RUN ckan-pip install -U pip && \
     cp -v $CKAN_VENV/src/ckan/contrib/docker/ckan-entrypoint.sh /ckan-entrypoint.sh && \
     chmod +x /ckan-entrypoint.sh && \
     chown -R ckan:ckan $CKAN_HOME $CKAN_VENV $CKAN_CONFIG $CKAN_STORAGE_PATH
-
-# Add plugins for the JDA
-RUN ckan-pip install -e "git+https://github.com/f-osorio/ckanext-edawax#egg=ckanext-edawax" && \
-    ckan-pip install -e "git+https://github.com/f-osorio/ckanext-dara#egg=ckanext-dara" && \
-    ckan-pip install -e "git+https://github.com/f-osorio/ckanext-journal-dashboard#egg=ckanext-journal-dashboard" && \
-    ckan-pip install -e "git+https://github.com/f-osorio/ckanext-wordpresser#egg=ckanext-wordpresser"
 
 ENTRYPOINT ["/ckan-entrypoint.sh"]
 
