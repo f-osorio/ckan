@@ -44,7 +44,7 @@ services:
       - ../../../ckanext-edawax:/var/lib/ckanext-edawax
       - ../../../ckanext-wordpresser:/var/lib/ckanext-wordpresser
       - ../../../ckanext-journal-dashboard:/var/lib/ckanext-journal-dashboard
-       - ../../../ckanext-pdfview:/var/lib/ckanext-pdfview
+      - ../../../ckanext-pdfview:/var/lib/ckanext-pdfview
 
   datapusher:
     container_name: datapusher
