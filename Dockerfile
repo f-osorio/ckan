@@ -1,4 +1,4 @@
-dockerfile-development# See CKAN docs on installation from Docker Compose on usage
+# See CKAN docs on installation from Docker Compose on usage
 FROM debian:stretch
 MAINTAINER Open Knowledge
 
