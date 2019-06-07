@@ -14,10 +14,10 @@ echo "Server is running"
 
 echo -e "\n\nRunning Tests"
 #python /home/ckan/Python/src/ckanext-func-test/ckanext/func_test/tests/selenium/base.py
-python /home/ckan/Python/src/ckanext-func-test/ckanext/func_test/tests/selenium/login.py
-python /home/ckan/Python/src/ckanext-func-test/ckanext/func_test/tests/selenium/admin_workflows_1.py
-python /home/ckan/Python/src/ckanext-func-test/ckanext/func_test/tests/selenium/author_workflows.py
-python /home/ckan/Python/src/ckanext-func-test/ckanext/func_test/tests/selenium/admin_workflows_2.py
+python /home/ckan/Python/src/ckanext-func-test/ckanext/func_test/tests/selenium/login.py 2> log_out.txt
+python /home/ckan/Python/src/ckanext-func-test/ckanext/func_test/tests/selenium/admin_workflows_1.py 2>> log_out.txt
+python /home/ckan/Python/src/ckanext-func-test/ckanext/func_test/tests/selenium/author_workflows.py 2>> log_out.txt
+python /home/ckan/Python/src/ckanext-func-test/ckanext/func_test/tests/selenium/admin_workflows_2.py 2>> log_out.txt
 echo -e "Tests Finished\n\n"
 
 sleep 3
@@ -30,4 +30,5 @@ echo "Reset test database"
 
 echo "Resetting config"
 sed -i 's/host\/ckan_test/host\/ckan_default/' $LOC
+echo "Test results in 'log_out.txt'"
 
