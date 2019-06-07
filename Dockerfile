@@ -57,7 +57,8 @@ RUN ckan-pip install -U pip && \
 RUN ckan-pip install -e "git+https://github.com/f-osorio/ckanext-edawax#egg=ckanext-edawax" && \
     ckan-pip install -e "git+https://github.com/f-osorio/ckanext-dara#egg=ckanext-dara" && \
     ckan-pip install -e "git+https://github.com/f-osorio/ckanext-journal-dashboard#egg=ckanext-journal-dashboard" && \
-    ckan-pip install -e "git+https://github.com/f-osorio/ckanext-wordpresser#egg=ckanext-wordpresser"
+    ckan-pip install -e "git+https://github.com/f-osorio/ckanext-wordpresser#egg=ckanext-wordpresser" && \
+    ckan-pip install -e "git+https://github.com/ckan/ckanext-pdfview.git#egg=ckanext-pdfview"
 
 ENTRYPOINT ["/ckan-entrypoint.sh"]
 
