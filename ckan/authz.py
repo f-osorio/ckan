@@ -184,6 +184,7 @@ ROLE_PERMISSIONS = OrderedDict([
     ('editor', ['read', 'delete_dataset', 'create_dataset', 'update_dataset', 'manage_group']),
 #    ('member', ['read', 'manage_group']),
     ('member', ['read', 'create_dataset',]),
+    ('reviewer', ['read', 'update_dateset']),
 ])
 
 
@@ -198,6 +199,10 @@ def _trans_role_editor():
 def _trans_role_member():
     #return _('Member')
     return _('Author')
+
+def _trans_role_reviewer():
+    #return _('Member')
+    return _('Reviewer')
 
 
 def trans_role(role):

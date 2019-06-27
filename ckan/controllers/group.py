@@ -187,6 +187,7 @@ class GroupController(base.BaseController):
             'limit': items_per_page,
             'offset': items_per_page * (page - 1),
         }
+
         page_results = self._action('group_list')(context,
                                                   data_dict_page_results)
 
@@ -361,6 +362,7 @@ class GroupController(base.BaseController):
                 limit = int(request.params.get('_%s_limit' % facet,
                                                g.facets_default_number))
                 c.search_facets_limits[facet] = limit
+
             c.page.items = query['results']
 
             c.sort_by_selected = sort_by
