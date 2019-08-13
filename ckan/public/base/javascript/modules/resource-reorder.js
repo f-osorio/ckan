@@ -12,7 +12,7 @@ this.ckan.module('resource-reorder', function($, _) {
       }
     },
     template: {
-      title: '<h1></h1>',
+      title: '<h1 class="zbw-box box-bottom"></h1>',
       button: [
         '<a href="javascript:;" class="btn">',
         '<i class="icon-reorder"></i>',
@@ -20,7 +20,7 @@ this.ckan.module('resource-reorder', function($, _) {
         '</a>'
       ].join('\n'),
       form_actions: [
-        '<div class="form-actions">',
+        '<div class="form-actions zbw-box box-full">',
         '<a href="javascript:;" class="cancel btn pull-left"></a>',
         '<a href="javascript:;" class="save btn btn-primary"></a>',
         '</div>'

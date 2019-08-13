@@ -575,6 +575,7 @@ class PackageController(base.BaseController):
             'ckan/templates/package/base_form_page.html for an example '
             'of the new way to include the form snippet'
             )
+
         return render(new_template,
                       extra_vars={'form_vars': form_vars,
                                   'form_snippet': form_snippet,
