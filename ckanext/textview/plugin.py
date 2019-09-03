@@ -19,6 +19,8 @@ def get_formats(config):
 
     text_formats = config.get('ckan.preview.text_formats', '').split()
     out['text_formats'] = text_formats or DEFAULT_TEXT_FORMATS
+    out['text_formats'].append('STATA do')
+    out['text_formats'].append('stata do')
 
     xml_formats = config.get('ckan.preview.xml_formats', '').split()
     out['xml_formats'] = xml_formats or DEFAULT_XML_FORMATS
