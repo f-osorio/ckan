@@ -115,7 +115,6 @@ def process_app_global(key, value):
             value = int(value)
         elif data_type == 'split':
             value = value.split()
-
     return key, value
 
 
