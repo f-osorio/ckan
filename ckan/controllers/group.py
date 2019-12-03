@@ -400,7 +400,7 @@ class GroupController(base.BaseController):
         data_dict = {'id': id}
 
         try:
-            self._check_access('group_update', context)
+            self._check_access('group_update', context, data_dict)
         except NotAuthorized:
             abort(401, _('Not authorized to view page.'))
 
