@@ -374,6 +374,7 @@ def login():
         came_from = h.url_for(u'user.logged_in')
     g.login_handler = h.url_for(
         _get_repoze_handler(u'login_handler_path'), came_from=came_from)
+
     return base.render(u'user/login.html', extra_vars)
 
 

@@ -139,6 +139,7 @@ class GroupController(base.BaseController):
 
     def index(self):
         group_type = self._guess_group_type()
+        print(group_type)
 
         page = h.get_page_number(request.params) or 1
         items_per_page = 21

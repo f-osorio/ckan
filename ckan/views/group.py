@@ -1001,7 +1001,6 @@ class EditGroupView(MethodView):
             u'action': u'edit',
             u'group_type': group_type
         }
-
         _setup_template_variables(context, data, group_type=group_type)
         form = base.render(_group_form(group_type), extra_vars)
 
