@@ -411,14 +411,19 @@ def group_dict_save(group_dict, context, prevent_packages_update=False):
             'Groups: %r  Tags: %r', pkgs_edited, group_users_changed,
             group_groups_changed, group_tags_changed)
 
-    extras = group_extras_save(group_dict.get("extras", {}), context)
-    if extras or not allow_partial_update:
-        old_extras = set(group.extras.keys())
-        new_extras = set(extras.keys())
-        for key in old_extras - new_extras:
+    #extras = group_extras_save(group_dict.get("extras", {}), context)
+    extras = group_dict.get("extras", [])
+    new_extras = {i['key'] for i in extras}
+    if extras:
+        old_extras = group.extras
+        for key in set(old_extras) - new_extras:
             del group.extras[key]
-        for key in new_extras:
-            group.extras[key] = extras[key]
+        for x in extras:
+            if 'deleted' in x and x['key'] in old_extras:
+                del group.extras[x['key']]
+                continue
+            group.extras[x['key']] = x['value']
+
 
     # We will get a list of packages that we have either added or
     # removed from the group, and trigger a re-index.

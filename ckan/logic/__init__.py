@@ -354,7 +354,6 @@ def get_action(action):
     :rtype: callable
 
     '''
-
     if _actions:
         if not action in _actions:
             raise KeyError("Action '%s' not found" % action)
