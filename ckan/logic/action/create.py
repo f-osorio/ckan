@@ -296,8 +296,8 @@ def resource_create(context, data_dict):
         pkg_dict['resources'] = []
 
     upload = uploader.ResourceUpload(data_dict)
-
     pkg_dict['resources'].append(data_dict)
+
 
     try:
         context['defer_commit'] = True

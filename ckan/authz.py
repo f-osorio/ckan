@@ -193,7 +193,8 @@ def _trans_role_admin():
 
 
 def _trans_role_editor():
-    return _('Editor')
+    #return _('Editor')
+    return _('Reviewer')
 
 
 def _trans_role_member():

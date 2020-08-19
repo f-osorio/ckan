@@ -187,7 +187,6 @@ class GroupController(base.BaseController):
             'limit': items_per_page,
             'offset': items_per_page * (page - 1),
         }
-
         page_results = self._action('group_list')(context,
                                                   data_dict_page_results)
 
@@ -399,6 +398,11 @@ class GroupController(base.BaseController):
                    'schema': self._db_to_form_schema(group_type=group_type),
                    'for_view': True, 'extras_as_string': True}
         data_dict = {'id': id}
+
+        try:
+            self._check_access('group_update', context, data_dict)
+        except NotAuthorized:
+            abort(401, _('Not authorized to view page.'))
 
         try:
             # Do not query for the group datasets when dictizing, as they will
@@ -667,6 +671,11 @@ class GroupController(base.BaseController):
 
         context = {'model': model, 'session': model.Session,
                    'user': c.user or c.author}
+
+        try:
+            self._check_access('group_update', context, {'id': id})
+        except NotAuthorized:
+            abort(401, _('Not authorized to view page.'))
 
         try:
             c.members = self._action('member_list')(
